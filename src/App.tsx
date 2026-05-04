@@ -9,6 +9,7 @@ import AuthPage from "@/pages/AuthPage";
 import NoAccess from "@/pages/NoAccess";
 import NotFound from "./pages/NotFound";
 import { MFAChallenge } from "@/components/auth/MFAChallenge";
+import CpTracker from "@/pages/cp-tracker-2/Index";
 // CLAUDE_INSERT_IMPORTS
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ function ProtectedRoutes() {
             <p className="text-muted-foreground mt-2">Welcome! Start building your app here.</p>
           </div>
         } />
+        <Route path="/cp-tracker-2" element={<CpTracker />} />
         {/* CLAUDE_INSERT_ROUTES */}
       </Route>
       <Route path="*" element={<NotFound />} />
